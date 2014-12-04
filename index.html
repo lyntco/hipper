@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='hipstrchat'>
 <head>
   <meta charset="UTF-8">
   <title>HipsterChat</title>
@@ -10,12 +10,18 @@
   <!-- endinject -->
 </head>
 <body>
+  <input type="text" ng-model="hello">
+  <div class="{{ hello }}">{{ hello }}</div>
+
+  <div ng-controller="AppCtrl"></div>
   <!-- <div class="container" ui-view></div> -->
   <!-- bower:js -->
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-mocks/angular-mocks.js"></script>
   <!-- endinject -->
   <!-- inject:js -->
+  <script src="/js/app.js"></script>
+  <script src="/js/controllers.js"></script>
   <!-- endinject -->
 </body>
 </html>
