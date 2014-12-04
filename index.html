@@ -29,13 +29,17 @@
   </div> -->
   <div class="container">
     <div class="header" ng-controller="HeaderCtrl">
-
+      {{ title }}
     </div>
     <div class="sidebar" ng-controller="SidebarCtrl">
+      {{ title }}
+      <ul>
+        <li ng-repeat="user in users">{{user.nickname}}</li>
+      </ul>
 
-    </div>
-    <div class="messages" ng-controller"MessagesCtrl">
 
+    </div><div class="messages" ng-controller="MessagesCtrl">
+      {{ title }}
     </div>
   </div>
 

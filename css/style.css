@@ -1,19 +1,33 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+html, body {
   background-color: white;
   font-family: Helvetica, sans-serif;
 }
 
-.alert {
-  background: #bf0000;
-  color: #fff;
+.header {
+  width: 100%;
+  height: 10%;
+  background: #333;
 }
 
-.button {
-  background-color: skyblue;
+.sidebar {
+  width: 15%;
   display: inline-block;
-  padding: 1em;
+  height: 90%;
+  background: #777;
 }
 
-.button:hover {
-  background-color: teal;
+.messages {
+  width: 85%;
+  display: inline-block;
+  height: 90%;
+  background: #bbb;
+  vertical-align: top;
 }
