@@ -12,10 +12,10 @@ angular.module('hipstrchat')
   //     alert('You clicked this button');
   //   };
   // })
-  .controller('HeaderCtrl', function($scope){
+  .controller('HeaderCtrl', function ($scope){
     $scope.title = "This is the header";
   })
-  .controller('SidebarCtrl', function($http, $scope){
+  .controller('SidebarCtrl', function ($http, $scope){
     $scope.title = "This is the sidebar";
     $scope.users = [];
     var getUsers = function () {
@@ -32,7 +32,7 @@ angular.module('hipstrchat')
     };
     getUsers();
   })
-  .controller('MessagesCtrl', function($scope, $http){
+  .controller('MessagesCtrl', function ($scope, $http){
     $scope.title = "This is the messages";
     $scope.messages = [];
     var getMessages = function () {

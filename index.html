@@ -40,6 +40,9 @@
 
     </div><div class="messages" ng-controller="MessagesCtrl">
       {{ title }}
+      <div ng-repeat="message in messages">
+        {{message.text}}
+      </div>
     </div>
   </div>
 
