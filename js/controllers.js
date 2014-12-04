@@ -71,5 +71,27 @@ angular.module('hipstrchat')
         console.log(data, req)
       })
     }
-  });
+  })
+  .controller('HomeCtrl', function(){
 
+  })
+  .controller('RoomsCtrl', function($scope, $http){
+    var getRooms = function () {
+      $http.get('http://hipstrchat.herokuapp.com/rooms.json').success(function(data){
+        $scope.rooms = data;
+      })
+    };
+    getRooms();
+  })
+  .controller('RoomCtrl', function($stateParams, $http, $scope){
+    console.log($stateParams);
+    var getRoom = function () {
+      $http.get('http://hipstrchat.herokuapp.com/rooms/'+ $stateParams.id )
+      .success(function (data) {
+        console.log(data)
+        $scope.messages = data.messages;
+        $scope.room = data.room;
+      })
+    }
+    getRoom();
+  })

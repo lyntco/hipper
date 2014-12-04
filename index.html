@@ -10,48 +10,13 @@
   <!-- endinject -->
 </head>
 <body>
-
-  <!-- <input type="text" ng-model="hello">
-  <div class="{{ hello }}">
-    {{ hello }}
-  </div>
-
-  <div ng-controller="AppCtrl">
-
-    {{ title }}
-    <ul>
-      <li ng-repeat="hero in heroes">{{hero}}</li>
-    </ul>
-    <div class="button" ng-click="buttonClicked()">
-      Click me
-    </div>
-
-  </div> -->
   <div class="container">
     <div class="header" ng-controller="HeaderCtrl">
       {{ title }}
     </div>
-    <div class="sidebar" ng-controller="SidebarCtrl">
-      {{ title }}
-      <ul>
-        <li ng-repeat="user in users">{{user.nickname}}</li>
-      </ul>
+    <div ui-view></div>
 
-
-    </div><div class="messages" ng-controller="MessagesCtrl">
-      <div class="new-message">
-        <form name="newMsgForm" ng-submit="sendMessage(newMsgForm)">
-          <input type="text" ng-model="data.text">
-          <button>Hip</button>
-        </form>
-      </div>
-      <input type="text" ng-model="search">
-      <div class="message" ng-repeat="message in messages | filter:search | reverse">
-        {{message.user_id}}: {{message.text}}
-      </div>
-    </div>
   </div>
-
 
 
 

@@ -64,3 +64,13 @@ html, body {
     border-radius: .5em;
   }
 }
+
+.rooms {
+  li {
+    padding: 1em;
+    background-color: $med;
+  }
+  li:hover {
+    background-color: $highlight;
+  }
+}

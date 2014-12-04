@@ -51,3 +51,11 @@ html, body {
   color: #ddd;
   border-radius: .5em;
 }
+
+.rooms li {
+  padding: 1em;
+  background-color: #777;
+}
+.rooms li:hover {
+  background-color: #ddd;
+}
