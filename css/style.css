@@ -8,6 +8,7 @@
 html, body {
   background-color: white;
   font-family: Helvetica, sans-serif;
+  height: 100%;
 }
 
 .header {
@@ -34,4 +35,19 @@ html, body {
 .message {
   padding: 1em;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.new-message {
+  padding: .5em;
+}
+.new-message input {
+  font-size: 1.5em;
+  padding: .3em;
+}
+.new-message button {
+  font-size: 1.5em;
+  padding: .3em;
+  background-color: #333;
+  color: #ddd;
+  border-radius: .5em;
 }

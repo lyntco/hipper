@@ -1,0 +1,6 @@
+angular.module('hipstrchat')
+  .filter('reverse', function() {
+    return function(items) {
+      return items.slice().reverse();
+    };
+  });
