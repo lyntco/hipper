@@ -43,3 +43,7 @@ html, body {
   background: $light;
   vertical-align: top;
 }
+.message {
+  padding: 1em;
+  border: 1px solid rgba(0,0,0,.1);
+}
