@@ -46,6 +46,11 @@ angular.module('hipstrchat')
     };
     getMessages();
 
+    setInterval(function(){
+      console.log('getting messages')
+      getMessages();
+    }, 5000);
+
     $scope.sendMessage = function (form) {
       var req = {
                  method: 'POST',
@@ -54,23 +59,16 @@ angular.module('hipstrchat')
                   'Content-Type': 'application/x-www-form-urlencoded'
                  },
                  data: {text: $scope.data.text, user_id: 1},
-                }
+                };
 
+      form.$setPristine();
+      $scope.data.text = '';
       $http(req)
       .success(function(){
-        form.$setPristine();
         getMessages();
       })
       .error(function(data){
         console.log(data, req)
       })
-      // var req = new XMLHttpRequest();
-      // req.open('post','http://hipstrchat.herokuapp.com/rooms/1/messages',true);
-      // req.send();
-      // $http.post('http://hipstrchat.herokuapp.com/rooms/1/messages', {text: $scope.data.text, user_id: 1})
-      // .success(function(){
-      //   form.$setPristine();
-      //   getMessages();
-      // })
     }
   });
