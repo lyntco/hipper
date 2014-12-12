@@ -8,7 +8,7 @@ angular.module('hipstrchat')
       $http.get('http://hipstrchat.herokuapp.com/rooms/'+ $stateParams.id )
       .success(function (data) {
         console.log(data)
-        $scope.messages = data.messages;
+        $scope.messages =   data.messages;
         $scope.room = data.room;
       }).error(function(data){
         console.log(data)
@@ -24,7 +24,7 @@ angular.module('hipstrchat')
     $scope.sendMessage = function (form) {
       var req = {
                  method: 'POST',
-                 url: 'http://hipstrchat.herokuapp.com/rooms/1/messages',
+                 url: 'http://hipstrchat.herokuapp.com/rooms/'+$stateParams.id+'/messages',
                  headers: {
                   'Content-Type': 'application/x-www-form-urlencoded'
                  },
